@@ -1,13 +1,10 @@
 package com.vladmihalcea.book.hpjp.hibernate.identifier.batch;
 
-import com.vladmihalcea.book.hpjp.util.providers.DataSourceProvider;
 import com.vladmihalcea.book.hpjp.util.providers.Database;
-import com.vladmihalcea.book.hpjp.util.providers.MariaDBDataSourceProvider;
-import org.hibernate.dialect.MariaDB102Dialect;
+import jakarta.persistence.*;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import jakarta.persistence.*;
 import java.util.Properties;
 
 public class MariaDBIdentifierTest extends AbstractBatchIdentifierTest {

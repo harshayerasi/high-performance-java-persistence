@@ -8,6 +8,7 @@ import com.vladmihalcea.book.hpjp.util.providers.entity.BlogEntityProvider;
 import jakarta.persistence.*;
 import org.hibernate.Session;
 import org.hibernate.annotations.NamedNativeQuery;
+import org.hibernate.boot.model.FunctionContributions;
 import org.hibernate.dialect.function.StandardSQLFunction;
 import org.hibernate.procedure.ProcedureCall;
 import org.hibernate.procedure.ProcedureOutputs;
@@ -324,9 +325,9 @@ public class OracleStoredProcedureTest extends AbstractOracleIntegrationTest {
     public static class OracleDialect extends FastOracleDialect {
 
         @Override
-        public void initializeFunctionRegistry(QueryEngine queryEngine) {
-            super.initializeFunctionRegistry(queryEngine);
-            queryEngine.getSqmFunctionRegistry().register(
+        public void initializeFunctionRegistry(FunctionContributions functionContributions) {
+            super.initializeFunctionRegistry(functionContributions);
+            functionContributions.getFunctionRegistry().register(
                 "fn_count_comments",
                 new StandardSQLFunction("fn_count_comments", StandardBasicTypes.INTEGER)
             );

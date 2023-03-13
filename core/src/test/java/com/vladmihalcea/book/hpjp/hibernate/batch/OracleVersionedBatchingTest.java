@@ -1,10 +1,6 @@
 package com.vladmihalcea.book.hpjp.hibernate.batch;
 
 import com.vladmihalcea.book.hpjp.util.AbstractTest;
-import com.vladmihalcea.book.hpjp.util.providers.DataSourceProvider;
-import com.vladmihalcea.book.hpjp.util.providers.OracleDataSourceProvider;
-import org.hibernate.dialect.Oracle10gDialect;
-import org.hibernate.dialect.Oracle9iDialect;
 import org.junit.Test;
 
 import jakarta.persistence.*;
